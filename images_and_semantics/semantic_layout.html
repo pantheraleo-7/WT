@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Semantic Layout - CSS</title>
+        <style>
+            *{
+                color: #ffffff;
+                font-size: 115%;
+                text-align: center;
+                border-radius: 15px;
+            }
+            header{
+                background-color: #808080;
+                height: 60px;
+            }
+            section{
+                height: 450px;
+            }
+            main{
+                background-color: #0000ff;
+                width: 70%;
+                height: 100%;
+                display: inline-block;
+            }
+            article{
+                background-color: #3399ff;
+                width: 90%;
+                height: 70%;
+                display: inline-block;
+                position: relative;
+                top: 10%;
+            }
+            nav{
+                background-color: #00cc99;
+                width: 15%;
+                height: 100%;
+                float: left;
+            }
+            aside{
+                background-color: #00cc99;
+                width: 15%;
+                height: 100%;
+                float: right;
+            }
+            footer{
+                background-color: #000000;
+                height: 60px;
+            }
+            li{
+                font-size: 60%;
+                text-align: left;
+                line-height: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            This is the Header of the document
+        </header>
+        <section>
+            <nav>
+                Navigation Bar
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <main>
+                This is the Main content of the document
+                <article>
+                    This is an independent content
+                </article>
+            </main>
+            <aside>
+                This content is placed Aside
+            </aside>
+        </section>
+        <footer>
+            This is the Footer of the document
+        </footer>
+    </body>
+</html>

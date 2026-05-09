@@ -1,0 +1,7 @@
+h1 {
+    border-style: none double;
+    border-color: #ff0000;
+    border-width: 15px;
+    width: fit-content;
+    text-decoration: overline underline double #0066cc;
+}

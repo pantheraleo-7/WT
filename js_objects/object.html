@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Object</title>
+        <script>
+            book = new Object()
+            book.subject = "JavaScript 2.0"
+            book.author = "Anuj Sharma"
+            book.cost = 250
+            book.ISBN = "321-4465-354-46-356"
+            book.addCategory = function(cat){
+                book.category = cat
+            }
+            book.addCategory("Web Programming")
+            document.write("Book name: "+book.subject+"<br>")
+            document.write("Book author: " + book.author+"<br>")
+            document.write("Book cost: "+book.cost+"<br>")
+            document.write("Book ISBN: "+book.ISBN+"<br>")
+            document.write("Book category: "+book.category)
+        </script>
+    </head>
+</html>

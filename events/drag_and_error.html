@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Drag events, onError</title>
+    </head>
+    <body>
+        <div draggable="true" ondragstart="atstart()" ondrag="atdrag()" ondragend="atend()" style="width: 100px; height: 100px; background-color: #009999;">Drag me</div>
+        <p id="tracker"><br></p>
+        <img src="error.jpg" onerror="aterror()">
+        <script>
+            track = document.getElementById("tracker")
+            function atstart(){
+                track.innerHTML = "Drag has started"
+            }
+            function atdrag(){
+                track.innerHTML = "Element is being dragged"
+            }
+            function atend(){
+                track.innerHTML = "Element has been released"
+            }
+            function aterror(){
+                alert("Error: image cannot be loaded")
+            }
+        </script>
+    </body>
+</html>

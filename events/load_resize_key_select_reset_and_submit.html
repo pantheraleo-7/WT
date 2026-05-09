@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Key & Load events, onReset, onResize, onSelect, onSubmit</title>
+    </head>
+    <body onload="atload()" onunload="atunload()" onkeydown="atdown()" onkeypress="atpress()" onkeyup="atup()" onresize="atresize()">
+        <form onsubmit="atsubmit()" onreset="atreset()">
+            <label>Input field: <input onselect="atselect()"></label>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form><br>
+        <div id="res"></div>
+        <script>
+            result = document.getElementById("res")
+            function atdown(){
+                result.innerHTML = "A key is down"
+            }        
+            function atpress(){
+                result.innerHTML = "A key is held press"
+            }        
+            function atup(){
+                result.innerHTML = "A key has been clicked"
+            }        
+            function atselect(){
+                result.innerHTML = "Text has been selected"
+            }
+            function atreset(){
+                result.innerHTML = "Input field has been reset"
+            }        
+            function atsubmit(){
+                alert("Input field has been submitted")
+            }
+            function atresize(){
+                alert("Window has been resized")
+            }
+            function atload(){
+                alert("Page has loaded")
+            }
+            function atunload(){
+                alert("Page has unloaded")
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Field & Dropdown List Validation</title>
+        <script>
+            function val(){
+                txt = document.getElementById("inp").value
+                re = txt.match(/[a-z]{2,15}\s[a-z]{2,15}/i)
+                list = document.getElementById("sel").value
+                if(txt!=re){
+                    alert("Enter a valid name: atleast 4, upto 30 alphabets allowed")
+                }
+                else if(list=="nd"){
+                    alert("Select course")
+                }
+                else{
+                    alert("Information submitted successfully")
+                    return true
+                }
+                return false
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return val()">
+            <label>Name: <input id="inp" placeholder="Firstname Lastname"></label><br><br>
+            <label>Course: <select id="sel">
+                <option value="nd">Select</option>
+                <option value="ds">Data Science</option>
+                <option value="it">Information Technology</option>
+            </select></label><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

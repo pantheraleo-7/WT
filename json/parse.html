@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parsing JSON</title>
+        <script>
+            jsonStr = '{"key1": "val1", "key2": 0.55, "key3": false, "key4": null, "key5": [1, 2, 3], "key6": {"k1": 55, "k2": true}}'
+            obj = JSON.parse(jsonStr, function(key, value){
+                if(value==null){
+                    return undefined
+                }
+                else{
+                    return value
+                }
+            })
+            document.write(obj.key6+"<br>")
+            document.write(obj.key6.k1)
+        </script>
+    </head>
+</html>

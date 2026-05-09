@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>onClick, onDblClick, onChange, onFocus, onBlur</title>
+        <script>
+            document.addEventListener("click", function(){
+                document.getElementById("res2").innerHTML = "Mouse left-click has been performed"
+            })
+            document.addEventListener("dblclick", function(){
+                document.getElementById("res2").innerHTML = "Double mouse left-click has been performed"
+            })
+            function atchange(txt){
+                alert("Input: "+txt.value)
+            }
+            function atfocus(){
+                document.getElementById("res").innerHTML = "Text field is currently in focus"
+            }
+            function atblur(){
+                document.getElementById("res").innerHTML = "<br>"
+            }
+        </script>
+    </head>
+    <body>
+        <label>Input field: <input onchange="atchange(this)" onblur="atblur()" onfocus="atfocus()"></label><br><br>
+        <div id="res"><br></div><br>
+        <div id="res2"></div>
+    </body>
+</html>

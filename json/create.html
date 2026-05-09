@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creating JSON</title>
+    </head>
+    <body>
+        <pre id="res1"></pre>
+        <pre id="res2"></pre>
+        <script>
+            obj = {key1: "val1", key2: 0.55, key3: false, key4: null, key5: [1, 2, 3], key6: {k1: 55, k2: true}}
+            jsonStr1 = JSON.stringify(obj, function(key, value){
+                if(value==null){
+                    return undefined
+                }
+                else{
+                    return value
+                }
+            }, 2)
+            jsonStr2 = JSON.stringify(obj, ["key6", "k1", "key2"], 4)
+            document.getElementById("res1").innerHTML = "String1:<br>"+jsonStr1
+            document.getElementById("res2").innerHTML = "String2:<br>"+jsonStr2
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        <button type="button" onclick="calc()">Calculate</button>
+        <script>
+            function calc(){
+                n = prompt("Enter a whole number:")
+                sum = 1
+                for(i=2;i<=n;i++){
+                    sum *= i
+                }
+                alert("Factorial of "+n+" = "+sum)
+            }
+        </script>
+    </body>
+</html>

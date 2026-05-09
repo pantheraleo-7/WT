@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Sentence Length</title>
+    </head>
+    <body>
+        <button type="button" onclick="find()">Find</button>
+        <script>
+            function find(){
+				txt = prompt("Enter a sentence:")
+                count = 1
+                for(i=1;i<txt.length;i++){
+                    if(txt.charAt(i)==" "){
+                        count++
+                    }
+                }
+                alert("Number of words in the sentence: "+count)
+            }
+        </script>
+    </body>
+</html>

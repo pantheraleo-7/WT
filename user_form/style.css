@@ -1,0 +1,61 @@
+* {
+    color: #442c0e;
+    font: medium sans-serif;
+}
+body {
+    background-image: linear-gradient(0deg,#2b2742, #5f9991);
+    min-height: 97.5vh;
+    text-align: center;
+}
+form {
+    background-image: linear-gradient(180deg,#2b2742, #8febdf);
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    padding: 2%;
+    border-radius: 12px;
+}
+input:not([type=checkbox], [type=radio]) {
+    width: 65%;
+    padding: 10px;
+    border: 2px solid #173733;
+    border-radius: 12px;
+    transition-duration : 0.5s;
+}
+input:not([type=checkbox], [type=radio]):hover, label:hover, input:not([type=checkbox], [type=radio]):focus {
+    background-color: beige;
+    width: 70%;
+}
+::placeholder {
+    color: #442c0e;
+    opacity: 1;
+}
+label {
+    background-color: white;
+    text-align: left;
+    display: inline-block;
+    width: 65%;
+    padding: 9px;
+    border: 2px solid #173733;
+    border-radius: 12px;
+    transition-duration : 0.5s;
+}
+button {
+    color: #8febdf;
+    background-color: #2b2742;
+    font-size: large;
+    width: 30%;
+    padding: 5px;
+    border: 2px solid #173733;
+    border-radius: 12px;
+    transition-duration : 0.5s;
+}
+button:hover, button:focus {
+    color: #2b2742;
+    background-color: beige;
+    width: 70%;
+}
+button:active {
+    width: 25%;
+    transition-duration: 0s;
+}

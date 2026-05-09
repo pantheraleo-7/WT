@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Controls Validation</title>
+        <script>
+            function val(){
+                txt = document.getElementById("inp").value
+                re = txt.match(/[a-z]{2,15}\s[a-z]{2,15}/i)
+                list = document.getElementById("sel").value
+                rad = document.querySelectorAll("input[name=r1]:checked").length
+                cb = document.querySelectorAll("input[name=c1]:checked").length
+                if(txt!=re){
+                    alert("Enter a valid name: atleast 4, upto 30 alphabets allowed")
+                }
+                else if(list=="nd"){
+                    alert("Select residence")
+                }
+                else if(rad==0){
+                    alert("Select gender")
+                }
+                else if(cb==0){
+                    alert("Select atleast 1 drink")
+                }
+                else{
+                    alert("Information submitted successfully")
+                    return true
+                }
+                return false
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return val()">
+            <label>Name: <input id="inp" placeholder="Firstname Lastname"></label><br><br>
+            <label>Residence: <select id="sel">
+                <option value="nd">Select</option>
+                <option value="mh">Maharashtra</option>
+                <option value="roi">Rest of India</option>
+            </select></label><br><br>
+            Gender:<br>
+            <label><input type="radio" name="r1" value="male">Male</label><br>
+            <label><input type="radio" name="r1" value="female">Female</label><br><br>
+            Drinks:<br>
+            <label><input type="checkbox" name="c1" value="tea">Tea</label><br>
+            <label><input type="checkbox" name="c1" value="coffee">Coffee</label><br>
+            <label><input type="checkbox" name="c1" value="softdrinks">Carbonated Drinks</label><br>
+            <label><input type="checkbox" name="c1" value="shakes">Milk Shakes</label><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

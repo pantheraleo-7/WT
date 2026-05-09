@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Area of Shapes</title>
+    </head>
+    <body>
+        <select id="sel">
+            <option value="circ">Circle</option>
+            <option value="sqr">Square</option>
+            <option value="rec">Rectangle</option>
+        </select>
+        <button type="button" onclick="calc()">Calculate</button>
+        <script>
+            function calc(){
+                s = document.getElementById("sel").value
+                if(s=="circ"){
+                    n = prompt("Enter the radius:")
+                    alert("Area of the circle = "+Math.PI*n*n)
+                }
+                if(s=="sqr"){
+                    n = prompt("Enter the side:")
+                    alert("Area of the square = "+n*n)
+                }
+                if(s=="rec"){
+                    n1 = prompt("Enter the length:")
+                    n2 = prompt("Enter the breadth:")
+                    alert("Area of the rectangle = "+n1*n2)
+                }
+            }
+        </script>
+    </body>
+</html>

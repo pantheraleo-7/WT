@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio & Checkbox Validation</title>
+        <script>
+            function val(){
+                rad = document.querySelectorAll("input[name=r1]:checked").length
+                cb = document.querySelectorAll("input[name=c1]:checked").length
+                if(rad==0){
+                    alert("Select gender")
+                }
+                else if(cb!=3){
+                    alert("3 selections required")
+                }
+                else{
+                    alert("Information submitted successfully")
+                    return true
+                }
+                return false
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return val()">
+            Gender:<br>
+            <label><input type="radio" name="r1" value="male">Male</label><br>
+            <label><input type="radio" name="r1" value="female">Female</label><br><br>
+            3 Favourite Sport:<br>
+            <label><input type="checkbox" name="c1" value="bd">Badminton</label><br>
+            <label><input type="checkbox" name="c1" value="cric">Cricket</label><br>
+            <label><input type="checkbox" name="c1" value="fb">Football</label><br>
+            <label><input type="checkbox" name="c1" value="kb">Kabaddi</label><br>
+            <label><input type="checkbox" name="c1" value="tn">Tennis</label><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

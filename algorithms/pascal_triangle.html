@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pascal's Triangle</title>
+        <script>
+            num = prompt("Enter number of rows:")
+            document.write("<div align='center'>1&emsp;<br>1&emsp;1&emsp;<br>")
+            prev = [1,1]
+            for(i=3;i<=num;i++){
+                crow = [1]
+                for(p=0;p<prev.length-1;p++){
+                    crow.push(prev[p]+prev[p+1])
+                }
+                crow.push(1)
+                str = ""
+                for(k=0;k<crow.length;k++){
+                    str += crow[k] + "&emsp;"
+                }
+                document.write(str+"<br>")
+                prev = crow
+            }
+            document.write("</div>")
+        </script>
+    </head>
+</html>

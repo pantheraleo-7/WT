@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Object</title>
+        <script>
+            arr1 = Array("Lotus", "Rose", "Jasmine")
+            arr2 = Array("Lion", "Tiger", "Cheetah")
+            document.write("Elements of Array1:<br>")
+            for(i in arr1){
+                document.write(arr1[i]+"<br>")
+            }
+            document.write("<br>Elements of Array2:<br>")
+            for(i in arr2){
+                document.write(arr2[i]+"<br>")
+            }
+            document.write("<br>Concatenation of Array1 & Array2:<br>")
+            document.write(arr1.concat(arr2)+"<br>")
+            document.write('<br>Joining elements with "and":<br>')
+            document.write(arr1.join(" and ")+"<br>")
+            document.write('<br>Appending "Lily":<br>')
+            arr1.push("Lily")
+            document.write(arr1+"<br>")
+            document.write("<br>Removing last element:<br>")
+            arr1.pop()
+            document.write(arr1+"<br>")
+            document.write("<br>Reversing:<br>")
+            arr1.reverse()
+            document.write(arr1+"<br>")
+            document.write("<br>Removing first element:<br>")
+            arr1.shift()
+            document.write(arr1+"<br>")
+            document.write("<br>Inserting element at the start:<br>")
+            arr1.unshift("White Lotus")
+            document.write(arr1+"<br>")
+            document.write("<br>Sorting alphabetically:<br>")
+            arr1.sort()
+            document.write(arr1)
+        </script>
+    </head>
+</html>

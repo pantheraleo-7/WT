@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci Sequence</title>
+        <script>
+            n = prompt("Enter the limit:")
+            arr = [0,1]
+            for(i=0;i<n-2;i++){
+                arr.push(arr[i]+arr[i+1])
+            }
+            for(j in arr){
+                document.write(arr[j]+"<br>")
+            }
+        </script>
+    </head>
+</html>

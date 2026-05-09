@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <form style="width: max-content;">
+            <fieldset>
+                <legend>Restaurant Feedback</legend><br>
+                <label>Name: <input type="text" placeholder="Enter your name here"></label><br><br>
+                <label>E-mail: <input type="email" placeholder="Enter your e-mail here"></label><br><br>
+                <label>Contact Number: <input type="tel" placeholder="Enter your contact here" pattern="[+91]{3}-[0-9]{10}" value="+91-"></label><br><br><br>
+                Items ordered:<br><br>
+                    <label><input type="checkbox" name="items" value="Pizza"> Pizza</label><br>
+                    <label><input type="checkbox" name="items" value="Pasta"> Pasta</label><br>
+                    <label><input type="checkbox" name="items" value="Burger"> Burger</label><br>
+                    <label><input type="checkbox" name="items" value="Noodles"> Noodles</label><br>
+                    <label><input type="checkbox" name="items" value="Cake"> Cake</label><br><br><br>
+                Review:<br><br>
+                    <label><input type="radio" name="review" value="VSat"> Very Satisfied</label><br>
+                    <label><input type="radio" name="review" value="Sat"> Satisfied</label><br>
+                    <label><input type="radio" name="review" value="Dis"> Dissatisfied</label><br>
+                    <label><input type="radio" name="review" value="VDis"> Very Dissatisfied</label><br><br><br>
+                Branch Visited:
+                    <select>
+                        <option>Thane</option>
+                        <option>Mumbra</option>
+                        <option>Kalva</option>
+                    </select><br><br>
+                <label>Date Visited: <input type="date"></label><br><br>
+                <label>Rating: <input type="number" min="1" max="10" placeholder="On a scale of 1-10"></label><br><br>
+                <label for="msg" style="float: left;">Feedback:</label>&nbsp;<textarea id="msg" rows="5"></textarea><br><br>
+                <div style="text-align: center;"><button type="submit">Submit</button> <button type="reset">Reset</button></div>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome Number</title>
+    </head>
+    <body>
+        <button type="button" onclick="check()">Check</button>
+        <script>
+            function check(){
+                str1 = prompt("Enter a whole number:")
+                str2 = str1.split("").reverse().join("")
+                if(str1==str2){
+                    alert(str1+" is a palindrome number")
+                }
+                else{
+                    alert(str1+" is not a palindrome number")
+                }
+            }
+        </script>
+    </body>
+</html>

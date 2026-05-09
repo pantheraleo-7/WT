@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primitive Calculator</title>
+    </head>
+    <body>
+        <form name="f">
+            <input name="num1">
+            <select name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input name="num2"> =
+            <input name="result" readonly><br><br>
+            <button type="button" onclick="f.result.value=eval(f.num1.value+f.operator.value+f.num2.value)">Calculate</button>
+            <button type="reset">Clear</button>
+        </form>
+    </body>
+</html>

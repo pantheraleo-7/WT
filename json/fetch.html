@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reading JSON</title>
+        <script type="module">
+            let url = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+            let response = await fetch(url)
+			let obj = await response.json()
+            document.write(obj.squadName+"<br>")
+            document.write("Name: "+obj.members[2].name+"<br>")
+            document.write("Powers: "+obj.members[2].powers)
+        </script>
+    </head>
+</html>

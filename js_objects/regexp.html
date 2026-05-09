@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RegExp Object</title>
+        <script>
+            str1 = "No pain no gain\nNo pain no gain"
+            str2 = "C++ is better than C\nC++ is better than C"
+            re1 = RegExp("Ain", "gim")
+            re2 = /c\+\+/i
+            document.write("Match(es) found: "+str1.match(re1)+"<br>")
+            document.write("Starting index: "+str1.search(re1)+"<br>")
+            document.write("New string: "+str2.replace(re2,"Java"))
+        </script>
+    </head>
+</html>

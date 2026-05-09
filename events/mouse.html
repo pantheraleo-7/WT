@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mouse events</title>
+    </head>
+    <body>
+        <span onmousemove="atmove()" onmouseout="atout1()" style="font-size: 300%;">Element</span><br><br>
+        <div id="res"><br></div><br><br>
+        <div onmouseover="atover()" onmouseout="atout2()" style="width: 100px; border: solid; padding: 10px;">Mouse-over changes to red italics</div>
+        <script>
+            result = document.getElementById("res")
+            document.addEventListener("mousedown", function(){
+                result.innerHTML = "A mouse button is down"
+            })
+            document.addEventListener("mouseup", function(){
+                result.innerHTML = "A mouse button has been clicked"
+            })
+            function atmove(){
+                result.innerHTML = "Mouse is on the element"
+            }
+            function atout1(){
+                result.innerHTML = "<br>"
+            }
+            function atover(){
+                document.body.style.color = "red"
+                document.body.style.fontStyle = "italic"
+            }
+            function atout2(){
+                document.body.style = "initial"
+            }
+        </script>
+    </body>
+</html>

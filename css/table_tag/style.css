@@ -1,0 +1,17 @@
+table {
+    border: 2px solid;
+    margin: 0 auto;
+} 
+th, td {
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid #ffffff;
+}
+th {
+    background-color: #ffa500;
+  
+}
+td {
+    background-color: #ffffff;
+    font-style: italic;
+}

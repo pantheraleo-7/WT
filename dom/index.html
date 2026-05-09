@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+        <script>
+            document.addEventListener("dblclick", crelm)
+            function crelm(){
+                elem = document.createElement("p")
+                elem.innerHTML = "This paragraph element has been created"
+                document.getElementById("cont").appendChild(elem)
+            }
+            function change(){
+                sty = document.createElement("style")
+                sty.innerHTML = "p{font-size:200%}"
+                document.head.appendChild(sty)
+            }
+            function center(){
+                att = document.createAttribute("style")
+                att.value = "text-align:center"
+                document.getElementById("cont").setAttributeNode(att)
+            }
+            function rmevt(){
+                document.removeEventListener("dblclick", crelm)
+            }
+            function crevt(){
+                document.addEventListener("dblclick", crelm)
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Double-click creates a paragraph element</h2>
+        <button onclick="change()">Change Size</button>
+        <button onclick="center()">Center</button>
+        <button onclick="crevt()">Start</button>
+        <button onclick="rmevt()">Stop</button>
+        <div id="cont"></div>
+    </body>
+</html>

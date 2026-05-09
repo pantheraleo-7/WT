@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Half Pyramid of Alphabets</title>
+        <script>
+            arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+            num = prompt("Enter number of rows:")
+            document.write("<div style='font-family: monospace;'>")
+            for(i=0;i<num;i++){
+                for(j=0;j<=i;j++){
+                    document.write(arr[i]+" ")         
+                }
+                document.write("<br>")
+            }
+            document.write('</div>')
+        </script>
+    </head>
+</html>

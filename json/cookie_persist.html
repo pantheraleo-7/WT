@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Persisting JSON - Preserving</title>
+        <script>
+            jsonStr = '{"key1": "value1", "key2": "value2"}'
+            document.cookie = "jsonStr="+jsonStr+";expires=2147483647;secure"
+            document.write(document.cookie)
+        </script>
+    </head>
+</html>

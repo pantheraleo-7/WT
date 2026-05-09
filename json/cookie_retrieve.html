@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Persisting JSON - Retrieving</title>
+        <script>
+            cookie = document.cookie
+            jsonStr = cookie.match(/{.*}/)[0]
+            document.write(jsonStr)
+        </script>
+    </head>
+</html>

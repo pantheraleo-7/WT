@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Armstrong Number</title>
+    </head>
+    <body>
+        <button type="button" onclick="check()">Check</button>
+        <script>
+            function check(){
+                n = prompt("Enter a whole number:")
+                sum = 0
+                for(i=0;i<n.length;i++){
+                    sum += Math.pow(n.charAt(i), n.length)
+                }
+                if(sum==n){
+                    alert(n+" is an armstrong number")
+                }
+                else{
+                    alert(n+" is not an armstrong number")
+                }
+            }
+        </script>
+    </body>
+</html>
